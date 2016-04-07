@@ -1,0 +1,82 @@
+h2.pos_left {
+  position: relative;
+  left: -20px;
+}
+
+h2.pos_right {
+  position: relative;
+  left: 20px;
+}
+
+h2.pos_abs {
+  position: absolute;
+  left: 100px;
+  top: 300px
+}
+
+p.one {
+  position: fixed;
+  left: 5px;
+  top: 380px;
+}
+
+p.two {
+  position: fixed;
+  top: 400px;
+  right: 5px;
+}
+
+img.normal {
+  position: absolute;
+  //top: 0px;
+  top: 5%;
+}
+
+img.clip {
+  position: absolute;
+  clip: rect(10px 80px 50px 0px);
+}
+
+img.top {
+  vertical-align: text-top;
+}
+
+img.bottom {
+  vertical-align: text-bottom;
+}
+
+div.scroll {
+  background-color: #00FFFF;
+  width:150px;
+  height:150px;
+  overflow: scroll;
+}
+
+div.hidden {
+  background-color: #00FFFF;
+  width:150px;
+  height:150px;
+  overflow: hidden;
+  //overflow: visible;
+}
+
+img.x {
+  position: absolute;
+  left: 100px;
+  top: 500px;
+  z-index: -1
+}
+
+.news {
+  background-color: gray;
+  border: solid 1px black;
+  float: left;
+}
+
+.news img {
+  float: left;
+}
+
+.news p {
+  float: right;
+}

@@ -1,0 +1,35 @@
+h1, h2, h3 {
+  color: gray;
+  background: white;
+  padding: 10px;
+  border: 1px solid black;
+  font-family: Verdana;
+}
+
+#intro {
+  font-weight:bold;
+}
+
+a[href][title] {
+  color: red;
+}
+
+p[class~="important"] {
+  color: blue;
+}
+
+h4 em {
+  color: red;
+}
+
+h5 > strong {
+  color: red;
+}
+
+h5 + p {
+  margin-top: 50px;
+}
+
+li + li {
+  font-weight: bold;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+<canvas id="myCanvas" width="200" height="100" style="border:1px solid #c3c3c3">
+  Your browser does not support the canvas element.
+</canvas>
+
+<script type="text/javascript">
+  var c=document.getElementById("myCanvas");
+  var cxt=c.getContext("2d");
+
+  //矩形
+  //cxt.fillStyle="#FF0000";
+  //cxt.fillRect(0,0,150,75);
+
+  //线条
+  //cxt.moveTo(10,10);
+  //cxt.lineTo(150,50);
+  //cxt.lineTo(10,50);
+  //cxt.stroke();
+
+  //圆形
+  //cxt.fillStyle="#FF0000";
+  //cxt.beginPath();
+  //cxt.arc(70,18,15,0,Math.PI*2,true);
+  //cxt.closePath();
+  //cxt.fill();
+
+  //渐变
+  //var grd=cxt.createLinearGradient(0,0,175,50);
+  //grd.addColorStop(0,"#FF0000");
+  //grd.addColorStop(1,"#00FF00");
+  //cxt.fillStyle=grd;
+  //cxt.fillRect(0,0,175,50);
+
+  //图像
+  var img=new Image();
+  img.src="../Resources/tab0.png";
+  //cxt.drawImage(img,0,0);
+  img.onload=function(){
+    cxt.drawImage(img,0,0);
+  }
+</script>
+
+</body>
+
+</html>

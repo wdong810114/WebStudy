@@ -1,0 +1,82 @@
+body {
+  font-family: Verdana, sans-serif;
+}
+
+td, ul, ol, li, dl, dt, dd {
+  font-family: Verdana, sans-serif;
+}
+
+strong {
+  color: red;
+}
+
+h2 {
+  color: red;
+}
+
+h2 strong {
+  color: blue;
+}
+
+#red {
+  color: red;
+}
+
+#green {
+  color: green;
+}
+
+#sidebar p {
+  font-style: italic;
+  text-align: right;
+  margin-top: 0.5em;
+}
+
+#sidebar h2 {
+  font-size: 1em;
+  font-weight: normal;
+  font-style: italic;
+  margin: 0;
+  line-height: 1.5;
+  text-align: right;
+}
+
+.center {
+  text-align: center;
+}
+
+.fancy0 td {
+  color: #f60;
+  background: #666;
+}
+
+td.fancy1 {
+  color: #f06;
+  background: #888;
+}
+
+input[type="text"]
+{
+  width: 150px;
+  display: block;
+  margin-bottom: 10px;
+  background-color: yellow;
+  font-family: Verdana, Arial;
+}
+
+input[type="button"]
+{
+  width: 120px;
+  margin-left: 35px;
+  display: block;
+  font-family: Verdana, Arial;
+}
+
+div {
+  background-color: yellow;
+  width: 500px;
+}
+
+div p {
+  text-indent: 20%;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
+</head>
+
+<body>
+
+<div onmouseover="mOver(this)" onmouseout="mOut(this)" style="background-color:green;width:120px;height:20px;padding:40px;color:#ffffff;">把鼠标移到上面</div>
+
+<script>
+function mOver(obj) {
+  obj.innerHTML = "谢谢";
+}
+
+function mOut(obj) {
+  obj.innerHTML = "把鼠标移到上面";
+}
+</script>
+
+<br /><br />
+
+<div onmousedown="mDown(this)" onmouseup="mUp(this)" style="background-color:green;color:#ffffff;width:90px;height:20px;padding:40px;font-size:12px;">请点击这里</div>
+
+<script>
+function mDown(obj) {
+  obj.style.backgroundColor = "#1ec5e5";
+  obj.innerHTML = "请释放鼠标按钮";
+}
+
+function mUp(obj) {
+  obj.style.backgroundColor = "green";
+  obj.innerHTML = "请按下鼠标按钮";
+}
+</script>
+
+<h1 onmouseover="style.color='red'" onmouseout="style.color='blue'" style="color:blue;">
+请把鼠标移到这段文本上
+</h1>
+
+<div id="div1">
+  <p id="p1">这是被删除的段落</p>
+  <p id="p2">这是一个段落</p>
+</div>
+
+<script>
+var para = document.createElement("p");
+var node = document.createTextNode("这是新段落。");
+para.appendChild(node);
+
+var element = document.getElementById("div1");
+element.appendChild(para);
+
+//var parent = document.getElementById("div1");
+//var child = document.getElementById("p1");
+//parent.removeChild(child);
+var child = document.getElementById("p1");
+child.parentNode.removeChild(child);
+</script>
+
+</body>
+
+</html>

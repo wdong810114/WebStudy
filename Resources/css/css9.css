@@ -1,0 +1,47 @@
+.center {
+  margin: auto;
+  width: 70%;
+  background-color: #b0e0e6;
+}
+
+img.normal {
+  height: auto;
+}
+
+img.big {
+  height: 25%;
+}
+
+img.small {
+  height: 10%;
+}
+
+p.max_height {
+  max-height: 10px;
+}
+
+p.display_inline {
+  display: inline;
+}
+
+div.display_none {
+  display: none;
+}
+
+span.display_block {
+  display: block
+}
+
+img.float_right {
+  float: right;
+  border: 1px solid black;
+  margin: 0px 20px 15px 20px;
+}
+
+h1.visible {
+  visibility: visible;
+}
+
+h1.invisible {
+  visibility: hidden;
+}

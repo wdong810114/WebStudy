@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+<p id="demo1"></p>
+
+<script>
+// 数组
+var i;
+var cars = new Array();
+cars[0] = "Audi";
+cars[1] = "BMW";
+cars[2] = "Volvo";
+//var cars = new Array("Audi", "BMW", "Volvo");
+//var cars = ["Audi", "BMW", "Volvo"];
+
+for(i=0; i<cars.length; i++) {
+  document.write(cars[i] + "<br />");
+}
+
+// 对象
+var person = {
+  firstname : "Bill",
+  lastname  : "Gates",
+  id        :  5566
+};
+document.write(person.lastname + "<br />");
+document.write(person["firstname"] + "<br />");
+
+var person1 = new Object();
+person1.firstname = "Bill";
+person1.lastname = "Gates";
+person1.age = 56;
+person1.eyecolor = "blue";
+document.write(person1.firstname + " is " + person1.age + " years old." + "<br />");
+
+var message = "Hello world!";
+var formatedMessage = message.toUpperCase();
+document.write("message: " + message + "<br />");
+document.write("formated message: " + formatedMessage + "<br />");
+
+// 带有返回值的函数
+function myFunction(a, b) {
+  return a * b;
+}
+
+document.getElementById("demo1").innerHTML = myFunction(4, 3);
+
+// 带参数的函数
+function myFunction1(name, job) {
+  alert("Welcome " + name + ", the " + job);
+}
+
+function myFunction2() {
+  var x = "";
+  var time = new Date().getHours();
+  if(time < 10) {
+    x = "Good morning";
+  } else if(time < 20) {
+    x = "Good day";
+  } else {
+    x = "Good evening";
+  }
+  document.getElementById("demo2").innerHTML = x;
+}
+
+function myFunction3() {
+  var x;
+  var d = new Date().getDay();
+  switch (d) {
+    case 0:
+      x = "Today it's Sunday";
+      break;
+    case 1:
+      x = "Today it's Monday";
+      break;
+    case 2:
+      x = "Today it's Tuesday";
+      break;
+    case 3:
+      x = "Today it's Wednesday";
+      break;
+    case 4:
+      x = "Today it's Thursday";
+      break;
+    case 5:
+      x = "Today it's Friday";
+      break;
+    case 6:
+      x = "Today it's Saturday";
+      break;
+  }
+  document.getElementById("demo3").innerHTML=x;
+}
+
+function myFunction4() {
+  try { 
+    var x1 = document.getElementById("demo4").value;
+    if(x1 == "")   throw "值为空";
+    if(isNaN(x1))  throw "不是数字";
+    if(x1 > 10)    throw "太大";
+    if(x1 < 5)     throw "太小";
+  } catch(err) {
+    var y1 = document.getElementById("mess");
+    y1.innerHTML = "错误：" + err + "。";
+  }
+}
+
+var txt = "";
+function showMessage() {
+  try {
+    adddlert("Welcome guest!");
+  } catch(err) {
+    txt = "本页有一个错误。\n\n";
+    txt += "错误描述：" + err.message + "\n\n";
+    txt += "点击关闭继续。\n\n";
+    alert(txt);
+  }
+}
+</script>
+
+<p>点击这个按钮，来调用带参数的函数。</p>
+<button onclick="myFunction1('Bill Gates', 'CEO');">点击这里</button>
+<button onclick="myFunction1('Harry Potter','Wizard')">点击这里</button>
+<button onclick="myFunction1('Bob','Builder')">点击这里</button>
+
+<p>如果时间早于 20:00，会获得问候 "Good day"。</p>
+<button onclick="myFunction2()">点击这里</button>
+<p id="demo2"></p>
+
+<p>点击下面的按钮来显示今天是周几：</p>
+<button onclick="myFunction3()">点击这里</button>
+<p id="demo3"></p>
+
+<input type="button" value="查看消息" onclick="showMessage()" />
+
+<p>请输入 5 到 10 之间的数字：</p>
+<input id="demo4" type="text">
+<button type="button" onclick="myFunction4()">测试输入值</button>
+<p id="mess"></p>
+
+</body>
+
+</html>

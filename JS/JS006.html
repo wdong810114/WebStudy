@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+<script>
+function person(firstname, lastname, age, eyecolor) {
+  this.firstname = firstname;
+  this.lastname = lastname;
+  this.age = age;
+  this.eyecolor = eyecolor;
+
+  this.changeAge = changeAge;
+  function changeAge(age) {
+    this.age = age;
+  }
+}
+
+var myFather = new person("Bill", "Gates", 56, "blue");
+var myMother = new person("Steve","Jobs",48,"green");
+
+document.write(myFather.firstname + " is " + myFather.age + " years old." + "<br />");
+document.write(myMother.firstname + " is " + myMother.age + " years old." + "<br />");
+myMother.changeAge(50);
+document.write(myMother.firstname + " is " + myMother.age + " years old." + "<br />");
+
+var person111 = {fname:"Bill", lname:"Gates", age:56};
+var txt = "";
+for(x in person111) {
+  txt = txt + person111[x] + " ";
+}
+document.write(txt + "<br />");
+
+var patt1 = new RegExp("e");
+document.write(patt1.test("The best things in life are free"));
+document.write("<br />");
+document.write(patt1.exec("The best things in life are free"));
+document.write("<br />");
+patt1.compile("d");
+document.write(patt1.test("The best things in life are free"));
+document.write("<br />");
+
+var patt2 = new RegExp("e","g");
+do {
+  result = patt2.exec("The best things in life are free");
+  document.write(result);
+}
+while(result!=null) 
+</script>
+
+<a href="testJS007.html">打开testJS007</a>
+
+</body>
+
+</html>
