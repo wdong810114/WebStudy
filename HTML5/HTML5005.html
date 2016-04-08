@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+<script type="text/javascript">
+
+localStorage.lastname="Smith";
+document.write("Last name: " + localStorage.lastname + "</br>");
+
+sessionStorage.lastname="Dong";
+document.write("Last name: " + sessionStorage.lastname + "</br>");
+
+</script>
+
+<script type="text/javascript">
+
+if(localStorage.pagecount) {
+  localStorage.pagecount=Number(localStorage.pagecount)+1;
+} else {
+  localStorage.pagecount=1;
+}
+document.write("Visits "+ localStorage.pagecount + " time(s)." + "</br>");
+
+if(sessionStorage.pagecount) {
+  sessionStorage.pagecount=Number(sessionStorage.pagecount)+1;
+} else {
+  sessionStorage.pagecount=1;
+}
+document.write("Visits "+sessionStorage.pagecount+" time(s) this session.");
+
+</script>
+
+<script>document.write(document.cookie);</script>
+
+</body>
+
+</html>
